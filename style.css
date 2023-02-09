@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+#wrapper{
+    height: 100vh;
+      overflow-x:hidden;  /* image not scroll in x direction:  */
+      overflow-y: auto;
+      perspective: 10px;   /*distance b/w z axis and my eye  or open z axis*/
+
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    height: 100%;
+    
+    transform-style: preserve-3d;  /*for 3d*/
+    z-index: -1;  /*  for overlapping*/
+}
+
+.background{
+    transform:translateZ(-20px) scale(4);
+}
+
+.foreground{
+     transform: translateZ(-10px) scale(2);
+
+}
+
+.h1{
+    /* position: absolute; */
+    transform: translateZ(-15px) scale(3);
+    color: whitesmoke;
+    font-size: 100px;
+    letter-spacing: 5px;
+}
+
+/* .h1 {
+    transform: translateZ(-30px);
+    scale: 4;
+    color: whitesmoke;
+    font-size: xx-large;
+    height: 35vh;
+} */
+
+.background , .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+section{
+     background-color: black;
+     color: white;
+     padding: 5rem 0;
+     
+}
+
+.adventuretime{
+    font-size: 5rem;
+    padding:0 10rem;
+}
+
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed; /*background image fix or not scroll with attachment*/
+    background-position: center;
+    background-size: cover;    /*image cover veiw port*/
+}
+
+.bg1{
+    background-image: url(image3.jpg);
+    /* height: 100%;
+    width: 100%; */
+}
+
+.bg2{
+     background-image: url(image4.jpg);
+}
+
+.bg3{
+    background-image: url(image5.jpg);
+}
+
+.desc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+    transform:translateX(-160px) ;
+}
+
+
